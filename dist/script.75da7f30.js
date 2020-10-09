@@ -28285,7 +28285,79 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"components/ButtonComponent.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/styles.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./..\\assets\\add_shopping_cart-24px.svg":[["add_shopping_cart-24px.38b222a0.svg","assets/add_shopping_cart-24px.svg"],"assets/add_shopping_cart-24px.svg"],"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"components/ButtonComponent.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28295,15 +28367,20 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+require("../css/styles.css");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Button() {
-  return /*#__PURE__*/_react.default.createElement("button", null, "Default");
+function Button(props) {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, props.text), /*#__PURE__*/_react.default.createElement("button", {
+    type: props.type,
+    className: props.name
+  }, props.textContent));
 }
 
 var _default = Button;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"components/App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../css/styles.css":"css/styles.css"}],"components/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28319,8 +28396,116 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function App() {
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
-    className: "default"
-  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, null));
+    text: "<Default/>",
+    type: "button",
+    textContent: "Default",
+    name: "FirstButton"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "&:hover, &:focus",
+    type: "button",
+    textContent: "Default",
+    name: "SecondButton"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "<Button variant='outline' />",
+    type: "button",
+    textContent: "Default",
+    name: "ThirdButton"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "&:hover, &:focus",
+    type: "button",
+    textContent: "Default",
+    name: "Button4"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "<Button variant='text' />",
+    type: "button",
+    textContent: "Default",
+    name: "Button5"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "&:hover, &:focus",
+    type: "button",
+    textContent: "Default",
+    name: "Button6"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "<Button disableShadow />",
+    type: "button",
+    textContent: "Default",
+    name: "Button7"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "<Button disable />",
+    type: "button",
+    textContent: "Disabled",
+    name: "Button8"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "<Button variant='text' disabled />",
+    type: "button",
+    textContent: "Disabled",
+    name: "Button9"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "<Button startIcon='local_grocery_store' />",
+    type: "button",
+    textContent: "Default",
+    name: "Button10"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "<Button endIcon='local_grocery_store' />",
+    type: "button",
+    textContent: "Default",
+    name: "Button11"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "<Button size='sm' />",
+    type: "button",
+    textContent: "Default",
+    name: "Button12"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "<Button size='md' />",
+    type: "button",
+    textContent: "Default",
+    name: "Button13"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "<Button size='lg' />",
+    type: "button",
+    textContent: "Default",
+    name: "Button14"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "<Button color='Default' />",
+    type: "button",
+    textContent: "Default",
+    name: "Button15"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "<Button color='primary' />",
+    type: "button",
+    textContent: "Default",
+    name: "Button16"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "<Button color='secondary' />",
+    type: "button",
+    textContent: "Secondary",
+    name: "Button17"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "<Button color='danger' />",
+    type: "button",
+    textContent: "Danger",
+    name: "Button18"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "&:hover, &:focus",
+    type: "button",
+    textContent: "Default",
+    name: "Button19"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "&:hover, &:focus",
+    type: "button",
+    textContent: "Default",
+    name: "Button20"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "&:hover, &:focus",
+    type: "button",
+    textContent: "Secondary",
+    name: "Button21"
+  }), /*#__PURE__*/_react.default.createElement(_ButtonComponent.default, {
+    text: "&:hover, &:focus",
+    type: "button",
+    textContent: "Danger",
+    name: "Button22"
+  }));
 }
 
 var _default = App;
@@ -28365,7 +28550,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53326" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52174" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,0 +1,111 @@
+button {
+    padding-inline: 16px;
+    padding-block: 8px;
+    border-radius: 6px;
+    margin: 16px;
+    border: none;
+    color: #3F3F3F;
+    font-weight: 500;
+}
+
+.SecondButton:hover,
+.SecondButton:focus {
+    background-color: darkgray;
+}
+
+.ThirdButton {
+    border: 1px solid blue;
+    color: blue;
+}
+
+
+.Button4:hover,
+.Button4:focus {
+    background-color: aliceblue;
+    border: 1px solid blue;
+}
+
+.Button5 {
+    background-color: white;
+    color: blue;
+}
+
+.Button6 {
+    background-color: white;
+}
+
+.Button6:hover,
+.Button6:focus {
+    background-color: aliceblue;
+    border: 2px solid blue;
+}
+
+.Button7 {
+    color: white;
+    background-color: blue;
+    box-shadow: none;
+}
+
+.Button8 {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: #c0c0c0;
+}
+
+.Button9 {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: #c0c0c0;
+    background-color: #ffffff;
+}
+
+.Button10,
+.Button11 {
+    background-color: blue;
+    color: white;
+}
+
+.Button10::before {
+    content: url('../assets/add_shopping_cart-24px.svg');
+    margin-inline-end: 16px;
+}
+
+.Button11::after {
+    content: url('../assets/add_shopping_cart-24px.svg');
+    margin-inline-start: 16px;
+}
+
+.Button12 {
+    background-color: blue;
+    color: white;
+    padding-inline: 12px;
+    padding-block: 6px;
+}
+
+.Button13 {
+    background-color: blue;
+    color: white;
+}
+
+.Button14 {
+    background-color: blue;
+    color: white;
+    padding-inline: 22px;
+    padding-block: 12px;
+}
+
+.Button21 {
+    color: white;
+    background-color: ;
+}
+
+.Button22 {
+    color: white;
+    background-color: red;
+}
+
+.Button22:hover,
+.Button22:focus {
+    background-color: darkred;
+}
+
