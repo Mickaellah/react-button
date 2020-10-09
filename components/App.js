@@ -5,115 +5,95 @@ function App() {
     return (
         <div>
             <Button
-                text="<Default/>"
+                text="<Button/>"
                 type="button"
                 textContent="Default"
-                name="FirstButton"/>
-            <Button 
-                text="&:hover, &:focus"
-                type="button"
-                textContent="Default"
-                name="SecondButton"/>
+                name="defaultBttn"
+                color="default1"/>
             <Button 
                 text="<Button variant='outline' />"
                 type="button"
                 textContent="Default"
-                name="ThirdButton"/>
-            <Button 
-                text="&:hover, &:focus"
-                type="button"
-                textContent="Default"
-                name="Button4"/>
+                name="outline"
+                variant="outline"/>
             <Button 
                 text="<Button variant='text' />"
                 type="button"
                 textContent="Default"
-                name="Button5"/>
-            <Button 
-                text="&:hover, &:focus"
-                type="button"
-                textContent="Default"
-                name="Button6"/>
+                name="textVariant"
+                variant="text"/>
             <Button 
                 text="<Button disableShadow />"
                 type="button"
                 textContent="Default"
-                name="Button7"/>
+                name="disableShadow"
+                disableShadow="disableShadow"/>
             <Button 
                 text="<Button disable />"
                 type="button"
                 textContent="Disabled"
-                name="Button8"/>
+                name="disabledBttn"
+                disable="disable"/>
             <Button 
                 text="<Button variant='text' disabled />"
                 type="button"
                 textContent="Disabled"
-                name="Button9"/>
+                name="textDisabledBttn"
+                variant="text disable"/>
             <Button 
                 text="<Button startIcon='local_grocery_store' />"
                 type="button"
                 textContent="Default"
-                name="Button10"/>
+                name="startIconBttn"
+                icon="startIcon"/>
             <Button 
                 text="<Button endIcon='local_grocery_store' />"
                 type="button"
                 textContent="Default"
-                name="Button11"/>
+                name="endIconBttn"
+                icon="endIcon"/>
             <Button 
                 text="<Button size='sm' />"
                 type="button"
                 textContent="Default"
-                name="Button12"/>
+                name="smBttn"
+                size="sm"/>
             <Button 
                 text="<Button size='md' />"
                 type="button"
                 textContent="Default"
-                name="Button13"/>
+                name="mdBttn"
+                size="md"/>
             <Button 
                 text="<Button size='lg' />"
                 type="button"
                 textContent="Default"
-                name="Button14"/>
+                name="lgBttn"
+                size="lg"/>
             <Button 
                 text="<Button color='Default' />"
                 type="button"
                 textContent="Default"
-                name="Button15"/>
+                name="default2"
+                color="default"/>
             <Button 
                 text="<Button color='primary' />"
                 type="button"
                 textContent="Default"
-                name="Button16"/>
+                name="primaryBttn"
+                color="primary"/>
             <Button 
                 text="<Button color='secondary' />"
                 type="button"
                 textContent='Secondary'
-                name="Button17"/>
+                name="secondaryBttn"
+                color="secondary"/>
             <Button 
                 text="<Button color='danger' />"
                 type="button"
                 textContent="Danger"
-                name="Button18"/>
-            <Button 
-                text="&:hover, &:focus"
-                type="button"
-                textContent="Default"
-                name="Button19"/>
-            <Button 
-                text="&:hover, &:focus"
-                type="button"
-                textContent="Default"
-                name="Button20"/>
-            <Button 
-                text="&:hover, &:focus"
-                type="button"
-                textContent="Secondary"
-                name="Button21"/>
-            <Button 
-                text="&:hover, &:focus"
-                type="button"
-                textContent="Danger"
-                name="Button22"/>
+                name="dangerBttn"
+                color="danger"/>
         </div>
     )
 }

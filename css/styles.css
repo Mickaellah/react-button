@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Noto Sans JP';
+    src: url('../font/NotoSansJP-Medium-Alphabetic.woff2') format('woff2'),
+        url('../font/NotoSansJP-Medium-Alphabetic.woff') format('woff');
+    font-weight: 500;
+}
+
+body {
+    font-family: 'Noto Sans JP';
+}
+
 button {
     padding-inline: 16px;
     padding-block: 8px;
@@ -5,107 +16,130 @@ button {
     margin: 16px;
     border: none;
     color: #3F3F3F;
-    font-weight: 500;
-}
-
-.SecondButton:hover,
-.SecondButton:focus {
-    background-color: darkgray;
-}
-
-.ThirdButton {
-    border: 1px solid blue;
-    color: blue;
 }
 
 
-.Button4:hover,
-.Button4:focus {
-    background-color: aliceblue;
-    border: 1px solid blue;
+#root > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.Button5 {
+#root div > div {
+    border: 2px solid gray;
+    text-align: center;
+}
+
+.defaultBttn:hover,
+.defaultBttn:focus {
+    background-color: #AEAEAE;
+}
+
+.outline {
+    border: 1px solid rgba(61, 90, 254, 1);
+    color: #2962FF;
+}
+
+.outline:hover,
+.outline:focus {
+    background-color: rgba(41, 98, 255, 0.1);
+}
+
+
+.textVariant {
     background-color: white;
-    color: blue;
+    color: #2962FF;
 }
 
-.Button6 {
-    background-color: white;
+.textVariant:hover,
+.textVariant:focus {
+    background-color: rgba(41, 98, 255, 0.1);
 }
 
-.Button6:hover,
-.Button6:focus {
-    background-color: aliceblue;
-    border: 2px solid blue;
-}
-
-.Button7 {
+.disableShadow {
     color: white;
-    background-color: blue;
+    background-color: #2962FF;
     box-shadow: none;
 }
 
-.Button8 {
+.disabledBttn {
     cursor: not-allowed;
     pointer-events: none;
     color: #c0c0c0;
 }
 
-.Button9 {
+.textDisabledBttn {
     cursor: not-allowed;
     pointer-events: none;
     color: #c0c0c0;
     background-color: #ffffff;
 }
 
-.Button10,
-.Button11 {
-    background-color: blue;
+.startIconBttn,
+.endIconBttn {
+    background-color: #2962FF;
     color: white;
 }
 
-.Button10::before {
+.startIconBttn::before {
     content: url('../assets/add_shopping_cart-24px.svg');
     margin-inline-end: 16px;
 }
 
-.Button11::after {
+.endIconBttn::after {
     content: url('../assets/add_shopping_cart-24px.svg');
     margin-inline-start: 16px;
 }
 
-.Button12 {
-    background-color: blue;
+.smBttn {
+    background-color: #2962FF;
     color: white;
     padding-inline: 12px;
     padding-block: 6px;
 }
 
-.Button13 {
-    background-color: blue;
+.mdBttn {
+    background-color: #2962FF;
     color: white;
 }
 
-.Button14 {
-    background-color: blue;
+.lgBttn {
+    background-color: #2962FF;
     color: white;
     padding-inline: 22px;
     padding-block: 12px;
 }
 
-.Button21 {
+.default2:hover,
+.default2:focus {
+    background-color: #AEAEAE;
+}
+
+.primaryBttn {
     color: white;
-    background-color: ;
+    background-color: #2962FF;
 }
 
-.Button22 {
+.primaryBttn:hover,
+.primaryBttn:focus {
+    background-color: #0039CB;
+}
+
+.secondaryBttn {
     color: white;
-    background-color: red;
+    background-color: #455A64;
 }
 
-.Button22:hover,
-.Button22:focus {
-    background-color: darkred;
+.secondaryBttn:hover,
+.secondaryBttn:focus {
+    background-color: #1c313A;
 }
 
+.dangerBttn {
+    background-color: #D32F2F;
+    color: white;
+}
+
+.dangerBttn:hover,
+.dangerBttn:focus {
+    background-color: #9A0007;
+}
