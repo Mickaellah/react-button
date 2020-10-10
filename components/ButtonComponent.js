@@ -1,10 +1,10 @@
 import React from "react";
-
 import "../css/styles.css"
 
 function Button(props) {
     let className;
 
+    // Conditions for checking all the props.
     if (props.color === 'default1') {
         className = 'defaultBttn';
     } else if (props.variant === 'outline') {
