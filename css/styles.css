@@ -5,6 +5,10 @@
     font-weight: 500;
 }
 
+:root {
+    --bacground_color: #2962FF;
+}
+
 body {
     font-family: 'Noto Sans JP';
     max-width: 1000px;
@@ -18,7 +22,7 @@ button {
     border-radius: 6px;
     margin: 16px;
     border: none;
-    color: #3F3F3F;
+    color: #ffffff;
     line-height: 22px;
 }
 
@@ -33,6 +37,10 @@ button {
     text-align: center;
 }
 
+.defaultBttn {
+    color: #3F3F3F;
+}
+
 .defaultBttn:hover,
 .defaultBttn:focus {
     background-color: #AEAEAE;
@@ -40,7 +48,7 @@ button {
 
 .outline {
     border: 1px solid rgba(61, 90, 254, 1);
-    color: #2962FF;
+    color: var(--bacground_color);
 }
 
 .outline:hover,
@@ -51,7 +59,7 @@ button {
 
 .textVariant {
     background-color: white;
-    color: #2962FF;
+    color: var(--bacground_color);
 }
 
 .textVariant:hover,
@@ -60,8 +68,7 @@ button {
 }
 
 .disableShadow {
-    color: white;
-    background-color: #2962FF;
+    background-color: var(--bacground_color);
     box-shadow: none;
 }
 
@@ -80,8 +87,7 @@ button {
 
 .startIconBttn,
 .endIconBttn {
-    background-color: #2962FF;
-    color: white;
+    background-color: var(--bacground_color);
 }
 
 .startIconBttn::before {
@@ -108,22 +114,23 @@ button {
 }
 
 .smBttn {
-    background-color: #2962FF;
-    color: white;
+    background-color: var(--bacground_color);
     padding-inline: 12px;
     padding-block: 6px;
 }
 
 .mdBttn {
-    background-color: #2962FF;
-    color: white;
+    background-color: var(--bacground_color);
 }
 
 .lgBttn {
-    background-color: #2962FF;
-    color: white;
+    background-color: var(--bacground_color);
     padding-inline: 22px;
     padding-block: 12px;
+}
+
+.default2 {
+    color: #3F3F3F;
 }
 
 .default2:hover,
@@ -132,8 +139,7 @@ button {
 }
 
 .primaryBttn {
-    color: white;
-    background-color: #2962FF;
+    background-color: var(--bacground_color);
 }
 
 .primaryBttn:hover,
@@ -142,7 +148,6 @@ button {
 }
 
 .secondaryBttn {
-    color: white;
     background-color: #455A64;
 }
 
@@ -153,7 +158,6 @@ button {
 
 .dangerBttn {
     background-color: #D32F2F;
-    color: white;
 }
 
 .dangerBttn:hover,
