@@ -38,7 +38,7 @@ function Button(props) {
     }
 
     return (
-        <div>
+        <div className="wrapper">
             <p>{props.text}</p>
             <button 
                 type={props.type} 
