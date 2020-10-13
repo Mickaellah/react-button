@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA","file":"styles.8986bff4.css","sourceRoot":"..","sourcesContent":["button { \r\n    padding-inline: 16px;\r\n    padding-block: 8px;\r\n    border-radius: 6px;\r\n    margin: 16px;\r\n}"]}
